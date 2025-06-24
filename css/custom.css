@@ -1,0 +1,31 @@
+:root {
+    --primary-color: 236, 114, 22;
+    --primary-foreground: 255, 255, 255;
+    --secondary-color: 241, 245, 249;
+    --tertiary-color: 51, 63, 92;
+
+    --primary-font-family: "Quicksand", sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+
+    *,
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-snap-align: center;
+    }
+
+    .main-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
