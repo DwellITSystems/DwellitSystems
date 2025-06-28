@@ -2,7 +2,7 @@
     --primary-color: 236, 114, 22;
     --primary-foreground: 255, 255, 255;
     --secondary-color: 241, 245, 249;
-    --tertiary-color: 51, 63, 92;
+    --tertiary-color: 2, 132, 199;
 
     --primary-font-family: "Quicksand", sans-serif;
 }
@@ -20,6 +20,7 @@
         padding: 0;
         box-sizing: border-box;
         scroll-snap-align: center;
+        font-family: var(--primary-font-family);
     }
 
     .main-wrapper {
@@ -28,4 +29,23 @@
         left: 0;
         width: 100%;
     }
+}
+
+.swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+}
+
+.slide-toggle {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+
+.slide-toggle.open {
+    max-height: 500px;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
 }

@@ -1,6 +1,14 @@
 tailwind.config = {
     theme: {
         extend: {
+            fontFamily: {
+                lato: ['Quicksand', 'sans-serif'],
+            },
+            maxHeight: {
+                '0': '0',
+                'screen': '100vh',
+                'full': '9999px'
+            },
             backgroundImage: {
 
             },

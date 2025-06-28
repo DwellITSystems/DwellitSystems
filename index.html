@@ -1,147 +1,133 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zxx" dir="ltr">
+<html class="no-js" lang="en" dir="ltr">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>DwellIT - Technology IT Solutions HTML Template</title>
+    <title>DwellIT - Systems</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <link rel="icon" href="">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/custom.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <script type="text/javascript" src="/js/tailwind-3.4.16.js"></script>
     <script type="text/javascript" src="/js/tailwind.config.js"></script>
 </head>
 
 <body>
-    <header class="relative z-50">
-        <div class="bg-gray-800/80 text-white hidden lg:block">
-            <div class="container mx-auto px-4">
-                <div class="flex justify-between items-center h-12">
-                    <div class="text-sm">
-                        <a href="#" class="font-medium inline">Now Hiring:</a> Are you a driven and motivated 1st Line
-                        IT
-                        Support Engineer?
+    <header class="w-full z-50 relative">
+        <div class="container mx-auto flex items-center justify-between py-4 px-4">
+            <div class="flex items-center w-fit">
+                <a href="#" class="block">
+                    <img src="./images/DwellITLogo.png" alt="logo main"
+                        class="h-12 w-auto hidden dark:block object-contain">
+                    <img src="./images/DwellITLogo.png" alt="logo dark"
+                        class="h-12 w-auto block dark:hidden object-contain">
+                    <img src="./images/DwellITLogo.png" alt="logo light" class="h-12 w-auto hidden object-contain">
+                </a>
+            </div>
 
-                    </div>
-                    <ul class="flex space-x-6">
+            <div class="w-full flex items-center justify-end space-x-6 xl:space-x-12">
+                <button type="button"
+                    class="bg-sky-600 hidden xl:flex text-white font-semibold px-10 py-3 rounded-lg hover:bg-sky-700 transition duration-300">
+                    Get In Touch
+                </button>
+
+                <!-- Hamburger Toggle Button -->
+                <button class="group relative w-[41.19px] h-12 text-white" id="sideToggleBtn">
+                    <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.19 12">
+                        <line x2="41.19" transform="translate(0 1)"
+                            class="transition-transform duration-500 ease-in-out group-hover:translate-x-4" fill="none"
+                            stroke="currentColor" stroke-width="2" />
+                        <line x2="41.19" transform="translate(0 11)"
+                            class="transition-transform duration-500 ease-in-out group-hover:translate-y-2" fill="none"
+                            stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </button>
+            </div>
+
+
+            <div id="sideMenu"
+                class="fixed top-0 right-0 h-full w-full xl:w-96 bg-white shadow-lg transform translate-x-full transition-transform duration-500 ease-in-out z-50 flex flex-col justify-between">
+
+                <div class="p-6 relative">
+                    <button id="closeSideMenu" class="absolute top-4 right-4 text-gray-600 hover:text-sky-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+
+                    <ul class="mt-12 space-y-6 text-lg font-medium text-gray-700">
+                        <li><a href="#" class="block hover:text-sky-600">Home</a></li>
+                        <li><a href="#" class="block hover:text-sky-600">About Us</a></li>
+
+                        <!-- Company Dropdown -->
                         <li>
-                            <a href="tel:01228899900" class="flex items-center text-white">
-                                <i class="fa fa-phone mr-2"></i>
-                                <strong>+91 1234567890</strong>
-                            </a>
+                            <button class="flex justify-between items-center w-full text-left hover:text-sky-600"
+                                data-toggle="companyMenu">
+                                Company
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="w-4 h-4 transform transition-transform duration-300" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <ul id="companyMenu" class="slide-toggle ml-4 space-y-4 text-sm text-gray-600">
+                                <li><a href="#" class="block hover:text-sky-600">Why choose us</a></li>
+                                <li><a href="#" class="block hover:text-sky-600">Our history</a></li>
+                                <li><a href="#" class="block hover:text-sky-600">FAQs</a></li>
+                                <li><a href="#" class="block hover:text-sky-600">Careers</a></li>
+                            </ul>
                         </li>
-                        <li class="flex items-center">
-                            <i class="fa fa-map-marker-alt mr-2"></i>
-                            <span>125 Test testing 123445</span>
+
+                        <!-- IT Solutions Dropdown -->
+                        <li>
+                            <button class="flex justify-between items-center w-full text-left hover:text-sky-600"
+                                data-toggle="itMenu">
+                                IT Solutions
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="w-4 h-4 transform transition-transform duration-300" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <ul id="itMenu" class="slide-toggle ml-4 space-y-4 text-sm text-gray-600">
+                                <li><a href="#" class="block hover:text-sky-600">IT Services</a></li>
+                                <li><a href="#" class="block hover:text-sky-600">Industries</a></li>
+                                <li><a href="#" class="block hover:text-sky-600">Business Solution</a></li>
+                                <li><a href="#" class="block hover:text-sky-600">IT Services Details</a></li>
+                            </ul>
                         </li>
+
+                        <li><a href="#" class="block hover:text-sky-600">Blog</a></li>
+                        <li><a href="#" class="block hover:text-sky-600">Contact Us</a></li>
                     </ul>
                 </div>
-            </div>
-        </div>
 
-        <div class="main-navbar sticky top-0 bg-white/40 z-50 transition-all duration-300">
-            <div class="container mx-auto px-4">
-                <div class="flex justify-between items-center">
-                    <div>
-                        <a href="index.html">
-                            <img src="images/DwellITLogo.png" alt="DwellIT Logo" width="160" height="48">
+                <!-- Social Media Icons -->
+                <div class="p-6 border-t border-gray-200">
+                    <div class="flex justify-center space-x-6 text-xl text-gray-600">
+                        <a href="#" target="_blank" class="hover:text-blue-600">
+                            <i class="fab fa-facebook-f"></i>
                         </a>
-                    </div>
-
-                    <nav class="hidden xl:flex space-x-8 ml-auto">
-                        <div class="relative group py-6 px-2">
-                            <a href="#" class="font-medium relative group-hover:text-sky-600">
-                                Home
-                                <span
-                                    class="absolute left-0 top-11 w-0 h-0.5 bg-sky-600 transition-all duration-300 group-hover:w-full"></span>
-                            </a>
-                        </div>
-
-                        <div class="relative group py-6">
-                            <a href="blog-list-large-image.html" class="font-medium relative group-hover:text-sky-600">
-                                About Us
-                                <span
-                                    class="absolute left-0 top-11 w-0 h-0.5 bg-sky-600 transition-all duration-300 group-hover:w-full"></span>
-                            </a>
-                        </div>
-
-                        <div class="relative group py-6 cursor-pointer">
-                            <a href="#" class="font-medium flex items-center gap-2 relative group-hover:text-sky-600">
-                                Company
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                                </svg>
-                                <span
-                                    class="absolute left-0 top-11 w-0 h-0.5 bg-sky-600 transition-all duration-300 group-hover:w-full"></span>
-                            </a>
-                            <ul class="absolute left-0 mt-6 bg-white border shadow-lg hidden group-hover:block w-48">
-                                <li><a href="why-choose-us.html" class="block px-4 py-2 hover:bg-gray-100">Why choose
-                                        us</a>
-                                </li>
-                                <li><a href="our-history.html" class="block px-4 py-2 hover:bg-gray-100">Our history</a>
-                                </li>
-                                <li><a href="faqs.html" class="block px-4 py-2 hover:bg-gray-100">FAQs</a></li>
-                                <li><a href="careers.html" class="block px-4 py-2 hover:bg-gray-100">Careers</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="relative group py-6">
-                            <a href="#" class="font-medium  flex items-center gap-2 relative group-hover:text-sky-600">
-                                IT Solutions
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                                </svg>
-                                <span
-                                    class="absolute left-0 top-11 w-0 h-0.5 bg-sky-600 transition-all duration-300 group-hover:w-full"></span>
-                            </a>
-                            <ul class="absolute left-0 mt-6 bg-white border shadow-lg hidden group-hover:block  w-48">
-                                <li><a href="it-services.html" class="block px-4 py-2 hover:bg-gray-100">IT Services</a>
-                                </li>
-                                <li><a href="managed-it-service.html" class="block px-4 py-2 hover:bg-gray-100">Managed
-                                        IT
-                                        Services</a></li>
-                                <li><a href="industries.html" class="block px-4 py-2 hover:bg-gray-100">Industries</a>
-                                </li>
-                                <li><a href="business-solution.html" class="block px-4 py-2 hover:bg-gray-100">Business
-                                        Solution</a></li>
-                                <li><a href="it-services-details.html" class="block px-4 py-2 hover:bg-gray-100">IT
-                                        Services
-                                        Details</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="relative group py-6">
-                            <a href="blog-list-large-image.html" class="font-medium relative group-hover:text-sky-600">
-                                Blog
-                                <span
-                                    class="absolute left-0 top-11 w-0 h-0.5 bg-sky-600 transition-all duration-300 group-hover:w-full"></span>
-                            </a>
-                        </div>
-
-                        <div class="relative group py-6">
-                            <a href="blog-list-large-image.html" class="font-medium relative group-hover:text-sky-600">
-                                Contact Us
-                                <span
-                                    class="absolute left-0 top-11 w-0 h-0.5 bg-sky-600 transition-all duration-300 group-hover:w-full"></span>
-                            </a>
-                        </div>
-                    </nav>
-
-                    <div class="flex items-center space-x-4">
-                        <button id="mobile-menu-trigger" class="text-gray-600 xl:hidden focus:outline-none">
-                            <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-                            </svg>
-                        </button>
+                        <a href="#" target="_blank" class="hover:text-sky-400">
+                            <i class="fab fa-x"></i>
+                        </a>
+                        <a href="#" target="_blank" class="hover:text-blue-700">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" target="_blank" class="hover:text-pink-500">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -149,273 +135,725 @@
     </header>
 
     <div class="main-wrapper">
-        <div class="w-full">
-            <div class="relative">
-                <div class="swiper mySwiper h-screen">
-                    <div class="swiper-wrapper">
+        <div class="w-full relative">
+            <div class="swiper mySwiper h-screen">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide bg-cover bg-center bg-no-repeat bg-fixed"
+                        style="background-image: url('./images/banner-1.jpg');">
+                        <div class="flex items-center justify-center h-full">
+                            <div class="text-center px-4">
+                                <h3 class="text-white text-lg md:text-2xl">IT Services Designed For</h3>
+                                <h1 class="text-white text-4xl md:text-8xl font-semibold">Your Business</h1>
+                                <div class="mt-8 flex justify-center gap-4 flex-wrap">
+                                    <a href="#"
+                                        class="bg-sky-600 text-white py-2 px-6 rounded-lg font-semibold uppercase hover:bg-sky-700 transition duration-300 h-14 w-56 inline-flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M17 13l-5 5m0 0l-5-5m5 5V3" />
 
-                        <!-- Slide 1 -->
-                        <div class="swiper-slide bg-cover bg-center bg-no-repeat"
-                            style="background-image: url('./images/banner-1.jpg');">
-                            <div class="flex items-center justify-center h-full bg-black/50">
-                                <div class="text-center px-4">
-                                    <h3 class="text-white text-lg md:text-xl">IT Services Designed For</h3>
-                                    <h1 class="text-white text-4xl md:text-6xl font-semibold my-4">Your Business</h1>
-                                    <p class="text-white max-w-xl mx-auto">Highly Tailored IT Design, Management &
-                                        Support Services.
-                                    </p>
-                                    <div class="mt-6 flex justify-center gap-4 flex-wrap">
-                                        <a href="#"
-                                            class="bg-blue-600 text-white py-2 px-6 rounded hover:bg-blue-700 transition h-14 w-56 inline-flex items-center justify-center">Free
-                                            consultation</a>
-                                        <a href="#"
-                                            class="bg-white text-blue-600 py-2 px-6 rounded hover:bg-gray-200 flex items-center transition h-14 w-56 inline-flex items-center justify-center">
-                                            <svg class="w-4 h-4 mr-2 fill-current" viewBox="0 0 20 20">
-                                                <path d="M4 4l12 6-12 6z" />
-                                            </svg> How we work
-                                        </a>
-                                    </div>
+                                        </svg>
+
+                                        How we work
+                                    </a>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Slide 2 -->
-                        <div class="swiper-slide bg-cover bg-center bg-no-repeat"
-                            style="background-image: url('./images/banner-2.jpg');">
-                            <div class="flex items-center justify-center h-full bg-black/50">
-                                <div class="text-center px-4">
-                                    <h3 class="text-white text-lg md:text-xl">IT Services Designed For</h3>
-                                    <h1 class="text-white text-4xl md:text-6xl font-semibold my-4">Your Company</h1>
-                                    <p class="text-white max-w-xl mx-auto">Highly Tailored IT Design, Management &
-                                        Support Services.
-                                    </p>
-                                    <div class="mt-6 flex justify-center gap-4 flex-wrap">
-                                        <a href="#"
-                                            class="bg-blue-600 text-white py-2 px-6 rounded hover:bg-blue-700 transition  h-14 w-56 inline-flex items-center justify-center">Free
-                                            consultation</a>
-                                        <a href="#"
-                                            class="bg-white text-blue-600 py-2 px-6 rounded hover:bg-gray-200 flex items-center transition  h-14 w-56 inline-flex items-center justify-center">
-                                            <svg class="w-4 h-4 mr-2 fill-current" viewBox="0 0 20 20">
-                                                <path d="M4 4l12 6-12 6z" />
-                                            </svg> How we work
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
 
-                    <!-- Pagination and Navigation -->
-                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide bg-cover bg-center bg-no-repeat"
+                        style="background-image: url('./images/banner-2.jpg');">
+                        <div class="flex items-center justify-center h-full">
+                            <div class="text-center px-4">
+                                <h3 class="text-white text-lg md:text-2xl">IT Services Designed For</h3>
+                                <h1 class="text-white text-4xl md:text-8xl font-semibold">Your Company</h1>
+                                <div class="mt-8 flex justify-center gap-4 flex-wrap">
+                                    <a href="#"
+                                        class="bg-white text-blue-600 py-2 px-6 rounded-lg hover:bg-gray-200 uppercase transition duration-300 font-semibold flex items-center h-14 w-56 justify-center">
+                                        <svg class="w-4 h-4 mr-2 fill-current" viewBox="0 0 20 20">
+                                            <path d="M4 4l12 6-12 6z" />
+                                        </svg> How we work
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Pagination and Navigation -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <section class="py-16 lg:py-28">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="w-full">
+                        <img src="https://tykit.rometheme.pro/virtu/wp-content/uploads/sites/11/2021/06/multi-ethnic-it-team-JDHACMJ.jpg"
+                            alt="Team Meeting" class="w-full h-auto object-cover rounded shadow" />
+                    </div>
+
+                    <div class="w-full">
+                        <h6 class="text-gray-600 text-sm font-medium mb-2 uppercase">About US</h6>
+                        <h5 class="text-sky-600 text-4xl font-bold uppercase">Welcome to DwellIT Systems</h5>
+                        <p class="text-gray-600 mt-4 leading-7">
+                            Phasellus odio dolor, tincidunt sed rutrum at, condimentum ac ipsum. Nullam congue pretium
+                            nisl. Curabitur at sem et leo dictum pretium. Morbi in rutrum tellus. Donec interdum ut
+                            felis et
+                            rutrum. Proin vitae venenatis sem. Aenean mattis malesuada dolor eget aliquam.
+                        </p>
+
+                        <a href="#"
+                            class="group inline-flex items-center bg-sky-600 mt-6 text-white font-semibold text-sm px-8 py-3 rounded-lg hover:bg-sky-700 transition-colors duration-300">
+                            Read More
+                            <span
+                                class="inline-block overflow-hidden max-w-0 group-hover:max-w-[24px] transition-all duration-300 ease-in-out">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="w-full py-24 bg-tertiary-color/30">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
+                    <div class="lg:w-3/6">
+                        <div>
+                            <h2 class="text-5xl font-bold mb-4">
+                                <span class="text-sky-600">5</span> Years’ Experience in IT
+                            </h2>
+                            <h3 class="text-1xl font-normal">
+                                Learn more about our <span class="text-sky-600">Success Stories</span>
+                            </h3>
+                            <a href="#"
+                                class="group inline-flex items-center bg-sky-600 mt-6 text-white font-semibold text-sm px-8 py-3 rounded-lg hover:bg-sky-700 transition-colors duration-300">
+                                Learn More
+                                <span
+                                    class="inline-block overflow-hidden max-w-0 group-hover:max-w-[24px] transition-all duration-300 ease-in-out">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Counters -->
+                    <div class="lg:w-3/6 grid grid-cols-2 md:grid-cols-2 gap-8">
+                        <!-- Counter Item -->
+                        <div class="text-center">
+                            <div class="text-6xl font-extrabold text-sky-600" data-count="1790">0</div>
+                            <h6 class="text-gray-900 mt-2">HAPPY CLIENTS</h6>
+                        </div>
+
+                        <div class="text-center">
+                            <div class="text-6xl font-extrabold text-sky-600" data-count="32">0</div>
+                            <h6 class="text-gray-900 mt-2">Finished projects</h6>
+                        </div>
+
+                        <div class="text-center">
+                            <div class="text-6xl font-extrabold text-sky-600" data-count="73">0</div>
+                            <h6 class="text-gray-900 mt-2">Happy clients</h6>
+                        </div>
+
+                        <div class="text-center">
+                            <div class="text-6xl font-extrabold text-sky-600" data-count="318">0</div>
+                            <h6 class="text-gray-900 mt-2">Blog posts</h6>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h6 class="text-gray-600 text-sm font-medium mb-2 uppercase">Testimonials</h6>
+                    <h3 class="text-gray-900 text-4xl font-bold uppercase">
+                        Why do people praise about <span class="text-sky-600">Dwellit System?</span>
+                    </h3>
+                </div>
+
+                <div class="swiper testimonialSwiper">
+                    <div class="swiper-wrapper pb-20">
+                        <div class="swiper-slide transition-all duration-500 ease-in-out">
+                            <div class="p-6 bg-white rounded-lg shadow text-center">
+                                <h6 class="text-lg font-semibold mb-4">The DwellIT team works really hard to ensure high
+                                    quality
+                                </h6>
+                                <p class="text-gray-600 mb-6">They provide premium services and dedicated support.</p>
+                                <div class="flex items-center justify-center gap-4">
+                                    <img src="/images/avatar.webp" alt="" class="w-14 h-14 rounded-full">
+                                    <div class="text-left">
+                                        <h6 class="font-bold">Stephen Mearsley</h6>
+                                        <span class="text-sm text-gray-500">PR Officer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide transition-all duration-500 ease-in-out">
+                            <div class="p-6 bg-white rounded-lg shadow text-center">
+                                <h6 class="text-lg font-semibold mb-4">The DwellIT team works really hard to ensure high
+                                    quality
+                                </h6>
+                                <p class="text-gray-600 mb-6">They provide premium services and dedicated support.</p>
+                                <div class="flex items-center justify-center gap-4">
+                                    <img src="/images/avatar.webp" alt="" class="w-14 h-14 rounded-full">
+                                    <div class="text-left">
+                                        <h6 class="font-bold">Stephen Mearsley</h6>
+                                        <span class="text-sm text-gray-500">PR Officer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide transition-all duration-500 ease-in-out">
+                            <div class="p-6 bg-white rounded-lg shadow text-center">
+                                <h6 class="text-lg font-semibold mb-4">The DwellIT team works really hard to ensure high
+                                    quality
+                                </h6>
+                                <p class="text-gray-600 mb-6">They provide premium services and dedicated support.</p>
+                                <div class="flex items-center justify-center gap-4">
+                                    <img src="/images/avatar.webp" alt="" class="w-14 h-14 rounded-full">
+                                    <div class="text-left">
+                                        <h6 class="font-bold">Stephen Mearsley</h6>
+                                        <span class="text-sm text-gray-500">PR Officer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="swiper-pagination mt-20"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-gray-900 w-full">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h6 class="text-gray-400 text-sm font-medium mb-2 uppercase">Industries we Serve</h6>
+                    <h3 class="text-white text-4xl font-bold uppercase">
+                        Inspiring, Hand-Crafted Items
+                    </h3>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="p-4">
+                        <div
+                            class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <div class="relative p-6">
+                                <svg width="100" height="100" viewBox="0 0 64 64" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="8" y="12" width="48" height="36" rx="2" stroke="#2563EB" stroke-width="3"
+                                        fill="#BFDBFE" />
+                                    <rect x="14" y="18" width="36" height="6" fill="#3B82F6" rx="1" />
+                                    <rect x="14" y="28" width="14" height="14" fill="#3B82F6" rx="1" />
+                                    <rect x="32" y="28" width="18" height="6" fill="#60A5FA" rx="1" />
+                                    <rect x="32" y="38" width="18" height="4" fill="#93C5FD" rx="1" />
+                                    <rect x="22" y="52" width="20" height="4" fill="#2563EB" rx="1" />
+                                    <line x1="32" y1="48" x2="32" y2="56" stroke="#1E40AF" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <h5 class="text-lg font-semibold mb-2">IT Design</h5>
+                                <p class="text-gray-600 mb-4">We provide the most responsive and functional IT
+                                    design for
+                                    companies and businesses worldwide.</p>
+                                <a href="#"
+                                    class="inline-flex items-center text-sky-600 hover:text-sky-800 font-semibold">
+                                    Discover now <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4">
+                        <div
+                            class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <div class="relative p-6">
+                                <svg width="100" height="100" viewBox="0 0 64 64" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="8" y="12" width="48" height="36" rx="2" stroke="#2563EB" stroke-width="3"
+                                        fill="#BFDBFE" />
+                                    <rect x="14" y="18" width="36" height="6" fill="#3B82F6" rx="1" />
+                                    <rect x="14" y="28" width="14" height="14" fill="#3B82F6" rx="1" />
+                                    <rect x="32" y="28" width="18" height="6" fill="#60A5FA" rx="1" />
+                                    <rect x="32" y="38" width="18" height="4" fill="#93C5FD" rx="1" />
+                                    <rect x="22" y="52" width="20" height="4" fill="#2563EB" rx="1" />
+                                    <line x1="32" y1="48" x2="32" y2="56" stroke="#1E40AF" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <h5 class="text-lg font-semibold mb-2">IT Management</h5>
+                                <p class="text-gray-600 mb-4">We provide the most responsive and functional IT
+                                    design for
+                                    companies and businesses worldwide.</p>
+                                <a href="#"
+                                    class="inline-flex items-center text-sky-600 hover:text-sky-800 font-semibold">
+                                    Discover now <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4">
+                        <div
+                            class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <div class="relative p-6">
+                                <svg width="100" height="100" viewBox="0 0 64 64" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="8" y="12" width="48" height="36" rx="2" stroke="#2563EB" stroke-width="3"
+                                        fill="#BFDBFE" />
+                                    <rect x="14" y="18" width="36" height="6" fill="#3B82F6" rx="1" />
+                                    <rect x="14" y="28" width="14" height="14" fill="#3B82F6" rx="1" />
+                                    <rect x="32" y="28" width="18" height="6" fill="#60A5FA" rx="1" />
+                                    <rect x="32" y="38" width="18" height="4" fill="#93C5FD" rx="1" />
+                                    <rect x="22" y="52" width="20" height="4" fill="#2563EB" rx="1" />
+                                    <line x1="32" y1="48" x2="32" y2="56" stroke="#1E40AF" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <h5 class="text-lg font-semibold mb-2">Data Security</h5>
+                                <p class="text-gray-600 mb-4">We provide the most responsive and functional IT
+                                    design for
+                                    companies and businesses worldwide.</p>
+                                <a href="#"
+                                    class="inline-flex items-center text-sky-600 hover:text-sky-800 font-semibold">
+                                    Discover now <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4">
+                        <div
+                            class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <div class="relative p-6">
+                                <svg width="100" height="100" viewBox="0 0 64 64" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="8" y="12" width="48" height="36" rx="2" stroke="#2563EB" stroke-width="3"
+                                        fill="#BFDBFE" />
+                                    <rect x="14" y="18" width="36" height="6" fill="#3B82F6" rx="1" />
+                                    <rect x="14" y="28" width="14" height="14" fill="#3B82F6" rx="1" />
+                                    <rect x="32" y="28" width="18" height="6" fill="#60A5FA" rx="1" />
+                                    <rect x="32" y="38" width="18" height="4" fill="#93C5FD" rx="1" />
+                                    <rect x="22" y="52" width="20" height="4" fill="#2563EB" rx="1" />
+                                    <line x1="32" y1="48" x2="32" y2="56" stroke="#1E40AF" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <h5 class="text-lg font-semibold mb-2">ERP/CRM Implementation</h5>
+                                <p class="text-gray-600 mb-4">We provide the most responsive and functional IT
+                                    design for
+                                    companies and businesses worldwide.</p>
+                                <a href="#"
+                                    class="inline-flex items-center text-sky-600 hover:text-sky-800 font-semibold">
+                                    Discover now <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4">
+                        <div
+                            class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <div class="relative p-6">
+                                <svg width="100" height="100" viewBox="0 0 64 64" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="8" y="12" width="48" height="36" rx="2" stroke="#2563EB" stroke-width="3"
+                                        fill="#BFDBFE" />
+                                    <rect x="14" y="18" width="36" height="6" fill="#3B82F6" rx="1" />
+                                    <rect x="14" y="28" width="14" height="14" fill="#3B82F6" rx="1" />
+                                    <rect x="32" y="28" width="18" height="6" fill="#60A5FA" rx="1" />
+                                    <rect x="32" y="38" width="18" height="4" fill="#93C5FD" rx="1" />
+                                    <rect x="22" y="52" width="20" height="4" fill="#2563EB" rx="1" />
+                                    <line x1="32" y1="48" x2="32" y2="56" stroke="#1E40AF" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <h5 class="text-lg font-semibold mb-2">App Development</h5>
+                                <p class="text-gray-600 mb-4">It’s possible to simultaneously manage and
+                                    transform
+                                    information from one server to another.</p>
+                                <a href="#"
+                                    class="inline-flex items-center text-sky-600 hover:text-sky-800 font-semibold">
+                                    Discover now <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4">
+                        <div
+                            class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <div class="relative p-6">
+                                <svg width="100" height="100" viewBox="0 0 64 64" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="8" y="12" width="48" height="36" rx="2" stroke="#2563EB" stroke-width="3"
+                                        fill="#BFDBFE" />
+                                    <rect x="14" y="18" width="36" height="6" fill="#3B82F6" rx="1" />
+                                    <rect x="14" y="28" width="14" height="14" fill="#3B82F6" rx="1" />
+                                    <rect x="32" y="28" width="18" height="6" fill="#60A5FA" rx="1" />
+                                    <rect x="32" y="38" width="18" height="4" fill="#93C5FD" rx="1" />
+                                    <rect x="22" y="52" width="20" height="4" fill="#2563EB" rx="1" />
+                                    <line x1="32" y1="48" x2="32" y2="56" stroke="#1E40AF" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <h5 class="text-lg font-semibold mb-2">IT Consulting</h5>
+                                <p class="text-gray-600 mb-4">Back up your database, store in a safe and secure
+                                    place while
+                                    still maintaining its accessibility.</p>
+                                <a href="#"
+                                    class="inline-flex items-center text-sky-600 hover:text-sky-800 font-semibold">
+                                    Discover now <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h6 class="text-gray-600 text-sm font-medium mb-2 uppercase">Blog</h6>
+                    <h3 class="text-gray-900 text-4xl font-bold uppercase">
+                        Our Recent Story
+                    </h3>
+                </div>
+
+                <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- Blog Card 1 -->
+                    <div class="bg-[#f4faff] rounded-lg overflow-hidden shadow hover:shadow-md transition"
+                        data-aos="fade-up" data-aos-delay="100" data-aos-duration="500" data-aos-once="true">
+                        <a href="#">
+                            <img src="/images/blog-1.webp" alt="image" class="w-full h-60 object-cover" loading="lazy">
+                        </a>
+                        <div class="p-6">
+                            <div class="text-sm text-gray-500 mb-2 flex gap-4">
+                                <a href="#" class="hover:text-blue-600">Admin</a>
+                                <span>August 15, 2022</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                                <a href="#" class="hover:text-blue-600">Making Peace With The Feast Or Famine Of
+                                    Freelancing</a>
+                            </h3>
+                            <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                do
+                                eiusmod...</p>
+                            <a href="#" class="inline-flex items-center text-blue-600 font-medium hover:underline">
+                                Read Story
+                                <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 2 -->
+                    <div class="bg-[#f4faff] rounded-lg overflow-hidden shadow hover:shadow-md transition"
+                        data-aos="fade-up" data-aos-delay="200" data-aos-duration="500" data-aos-once="true">
+                        <a href="#">
+                            <img src="/images/blog-2.webp" alt="image" class="w-full h-60 object-cover" loading="lazy">
+                        </a>
+                        <div class="p-6">
+                            <div class="text-sm text-gray-500 mb-2 flex gap-4">
+                                <a href="#" class="hover:text-blue-600">Admin</a>
+                                <span>August 18, 2022</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                                <a href="#" class="hover:text-blue-600">I Used The Web For A Day On A 50 MB Budget</a>
+                            </h3>
+                            <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                do
+                                eiusmod...</p>
+                            <a href="#" class="inline-flex items-center text-blue-600 font-medium hover:underline">
+                                Read Story
+                                <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 3 -->
+                    <div class="bg-[#f4faff] rounded-lg overflow-hidden shadow hover:shadow-md transition"
+                        data-aos="fade-up" data-aos-delay="300" data-aos-duration="500" data-aos-once="true">
+                        <a href="#">
+                            <img src="/images/blog-3.webp" alt="image" class="w-full h-60 object-cover" loading="lazy">
+                        </a>
+                        <div class="p-6">
+                            <div class="text-sm text-gray-500 mb-2 flex gap-4">
+                                <a href="#" class="hover:text-blue-600">Admin</a>
+                                <span>August 15, 2022</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                                <a href="#" class="hover:text-blue-600">Here are the 5 most telling signs of
+                                    micromanagement</a>
+                            </h3>
+                            <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                do
+                                eiusmod...</p>
+                            <a href="#" class="inline-flex items-center text-blue-600 font-medium hover:underline">
+                                Read Story
+                                <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="#"
+                        class="group inline-flex items-center bg-sky-600 mt-6 text-white font-semibold text-sm px-8 py-3 rounded-lg hover:bg-sky-700 transition-colors duration-300">
+                        More Blog
+                        <span
+                            class="inline-block overflow-hidden max-w-0 group-hover:max-w-[24px] transition-all duration-300 ease-in-out">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6">
+                                </path>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white">
+            <div class="container mx-auto">
+                <div class="flex flex-col lg:flex-row">
+                    <!-- Left side with full background image -->
+                    <div class="w-full lg:w-1/2 relative h-[400px] lg:h-auto">
+                        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                            style="background-image: url('/images/banner-1.jpg');"></div>
+                        <div
+                            class="relative z-10 px-6 py-12 text-white bg-black/50 h-full flex flex-col justify-center">
+                            <h3 class="text-3xl lg:text-4xl font-semibold leading-relaxed">
+                                To make requests for <br>
+                                further information, <br>
+                                <span class="text-blue-400">contact us</span> via our social channels.
+                            </h3>
+                            <p class="mt-6 text-lg">
+                                We just need a couple of hours! <br>
+                                No more than 2 working days since receiving your issue ticket.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right side form -->
+                    <div class="w-full lg:w-1/2 py-24">
+                        <form id="contact-form" action="#" method="post" class="p-8 space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <input type="text" name="con_name" placeholder="Name *" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <input type="email" name="con_email" placeholder="Email *" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <input type="text" name="con_subject" placeholder="Subject *" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <textarea name="con_message" rows="5" placeholder="Please describe what you need." required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"></textarea>
+                            <div class="pt-2">
+                                <button type="submit"
+                                    class="bg-sky-600 text-white font-semibold px-6 py-3 rounded-md hover:bg-sky-700 transition">
+                                    Send message
+                                </button>
+                                <p class="form-messege mt-2 text-sm text-green-600"></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-10 bg-contain bg-right bg-no-repeat bg-black"
+            style="background-image: url('/images/pattern.webp')">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col lg:flex-row items-center justify-between">
+                    <div class="lg:w-2/3 text-center lg:text-left mb-6 lg:mb-0">
+                        <h3 class="text-white text-3xl lg:text-3xl font-semibold">
+                            We run all kinds of IT services that vow your
+                            <span class="text-sky-600"> success</span>
+                        </h3>
+                    </div>
+                    <div class="lg:w-1/3 text-center">
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                            <a href="#"
+                                class="bg-white text-black font-semibold px-6 py-3 rounded-lg flex items-center shadow hover:bg-gray-200 transition">
+                                <i class="far fa-comment-alt mr-2"></i> Let's talk
+                            </a>
+                            <a href="#"
+                                class="bg-sky-600 text-white font-semibold px-6 py-3 rounded-lg flex items-center shadow hover:bg-sky-700 transition">
+                                <i class="fas fa-info-circle mr-2"></i> Get info
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="rs-footer" class="bg-gray-900 text-white">
+            <div class="py-12 border-b border-gray-700">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-wrap -mx-4">
+                        <!-- Logo and Description -->
+                        <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-10 md:mb-8">
+                            <a href="#" class="block mb-6">
+                                <img src="images/DwellITLogo.png" alt="Logo" class="h-10">
+                            </a>
+                            <p class="text-gray-400 mb-6">
+                                Sedut perspiciatis unde omnis iste natus error sitlutem acc usantium doloremque
+                                denounce with
+                                illo inventore veritatis
+                            </p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-x"></i></a>
+                                <a href="#" class="text-gray-400 hover:text-white"><i
+                                        class="fab fa-pinterest-p"></i></a>
+                                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- IT Services -->
+                        <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-10 md:mb-8">
+                            <h3 class="text-lg font-semibold mb-6">IT Services</h3>
+                            <ul class="space-y-3 text-gray-400">
+                                <li><a href="#" class="hover:text-white">Software
+                                        Development</a></li>
+                                <li><a href="#" class="hover:text-white">Web Development</a></li>
+                                <li><a href="#" class="hover:text-white">Analytic
+                                        Solutions</a></li>
+                                <li><a href="#" class="hover:text-white">Cloud and DevOps</a>
+                                </li>
+                                <li><a href="#" class="hover:text-white">Product Design</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-10 md:mb-8">
+                            <h3 class="text-lg font-semibold mb-6">Contact Info</h3>
+                            <ul class="space-y-4 text-gray-400">
+                                <li class="flex items-start space-x-3">
+                                    <i class="flaticon-location text-xl"></i>
+                                    <span>Test njcfj sdjvkjdskvjk sdvdsv 123456</span>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <i class="flaticon-call text-xl"></i>
+                                    <a href="tel:(+880)155-69569" class="hover:text-white">(+880)155-69569</a>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <i class="flaticon-email text-xl"></i>
+                                    <a href="mailto:info@yourmail.com" class="hover:text-white">info@yourmail.com</a>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <i class="flaticon-clock-1 text-xl"></i>
+                                    <span>Opening Hours: 10:00 - 18:00</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Newsletter -->
+                        <div class="w-full md:w-1/2 lg:w-1/4 px-4">
+                            <h3 class="text-lg font-semibold mb-6">Newsletter</h3>
+                            <p class="text-gray-400 mb-4">We denounce with righteous and in and dislike men who are
+                                so beguiled
+                                and demo realized.</p>
+                            <form class="flex items-center space-x-2">
+                                <input type="email" placeholder="Your email address" required
+                                    class="w-full px-4 py-2 rounded bg-gray-800 text-white placeholder-gray-500 focus:outline-none">
+                                <button type="submit"
+                                    class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded text-white">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <section class="w-full">
-                <div class="bg-gray-400 py-24">
-                    <div class="container mx-auto px-4">
-                        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
-
-                            <!-- Left Content -->
-                            <div class="lg:w-5/12">
-                                <div class="me-5">
-                                    <h2 class="text-4xl font-bold mb-4">
-                                        <span class="text-blue-600">38</span> Years’ Experience in IT
-                                    </h2>
-                                    <h3 class="text-2xl font-semibold">
-                                        Learn more about our <span class="text-blue-600">Success Stories</span>
-                                    </h3>
-                                </div>
-                            </div>
-
-                            <!-- Right Counters -->
-                            <div class="lg:w-7/12 grid grid-cols-2 md:grid-cols-2 gap-8">
-                                <!-- Counter Item -->
-                                <div class="text-center">
-                                    <div class="text-5xl font-extrabold text-blue-600" data-count>1790</div>
-                                    <h6 class="text-gray-700 mt-2">Account numbers</h6>
-                                </div>
-
-                                <div class="text-center">
-                                    <div class="text-5xl font-extrabold text-blue-600" data-count>32</div>
-                                    <h6 class="text-gray-700 mt-2">Finished projects</h6>
-                                </div>
-
-                                <div class="text-center">
-                                    <div class="text-5xl font-extrabold text-blue-600" data-count>73</div>
-                                    <h6 class="text-gray-700 mt-2">Happy clients</h6>
-                                </div>
-
-                                <div class="text-center">
-                                    <div class="text-5xl font-extrabold text-blue-600" data-count>318</div>
-                                    <h6 class="text-gray-700 mt-2">Blog posts</h6>
-                                </div>
-                            </div>
-
+            <div class="py-6 bg-gray-800">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-wrap justify-between items-center">
+                        <div class="w-full lg:w-1/2 text-center lg:text-left text-gray-400 mb-4 lg:mb-0">
+                            <p>© <span id="current-year">2025</span> All Rights Reserved. Developed By <a href="#"
+                                    class="text-blue-500 hover:underline">DwellIT Systems</a></p>
+                        </div>
+                        <div class="w-full lg:w-1/2 text-center lg:text-right">
+                            <ul class="flex justify-center lg:justify-end space-x-4 text-gray-400">
+                                <li><a href="index.html" class="hover:text-white">Home</a></li>
+                                <li><a href="about.html" class="hover:text-white">About</a></li>
+                                <li><a href="blog.html" class="hover:text-white">Blog</a></li>
+                                <li><a href="shop.html" class="hover:text-white">Shop</a></li>
+                                <li><a href="faq.html" class="hover:text-white">FAQs</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </footer>
 
-            <section class="w-full">
-                <div class="bg-gray-100 py-12">
-                    <div class="container mx-auto px-4">
-
-                        <!-- Swiper -->
-                        <div class="swiper mySwiper feature-swiper">
-                            <div class="swiper-wrapper">
-
-                                <!-- Slide 1 -->
-                                <div class="swiper-slide p-4">
-                                    <div
-                                        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                                        <div class="relative">
-                                            <svg width="100" height="100" viewBox="0 0 64 64" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="8" y="12" width="48" height="36" rx="2" stroke="#2563EB"
-                                                    stroke-width="3" fill="#BFDBFE" />
-                                                <rect x="14" y="18" width="36" height="6" fill="#3B82F6" rx="1" />
-                                                <rect x="14" y="28" width="14" height="14" fill="#3B82F6" rx="1" />
-                                                <rect x="32" y="28" width="18" height="6" fill="#60A5FA" rx="1" />
-                                                <rect x="32" y="38" width="18" height="4" fill="#93C5FD" rx="1" />
-                                                <rect x="22" y="52" width="20" height="4" fill="#2563EB" rx="1" />
-                                                <line x1="32" y1="48" x2="32" y2="56" stroke="#1E40AF"
-                                                    stroke-width="2" />
-                                            </svg>
-                                        </div>
-                                        <div class="p-6">
-                                            <h5 class="text-lg font-semibold mb-2">IT Design</h5>
-                                            <p class="text-gray-600 mb-4">We provide the most responsive and functional
-                                                IT design for
-                                                companies and businesses worldwide.</p>
-                                            <a href="#"
-                                                class="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold">
-                                                Discover now <i class="fas fa-arrow-right ml-2"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Slide 2 -->
-                                <div class="swiper-slide p-4">
-                                    <div
-                                        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                                        <div class="relative">
-                                            <svg width="100" height="100" viewBox="0 0 64 64" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="8" y="12" width="48" height="36" rx="2" stroke="#2563EB"
-                                                    stroke-width="3" fill="#BFDBFE" />
-                                                <rect x="14" y="18" width="36" height="6" fill="#3B82F6" rx="1" />
-                                                <rect x="14" y="28" width="14" height="14" fill="#3B82F6" rx="1" />
-                                                <rect x="32" y="28" width="18" height="6" fill="#60A5FA" rx="1" />
-                                                <rect x="32" y="38" width="18" height="4" fill="#93C5FD" rx="1" />
-                                                <rect x="22" y="52" width="20" height="4" fill="#2563EB" rx="1" />
-                                                <line x1="32" y1="48" x2="32" y2="56" stroke="#1E40AF"
-                                                    stroke-width="2" />
-                                            </svg>
-                                        </div>
-                                        <div class="p-6">
-                                            <h5 class="text-lg font-semibold mb-2">IT Management</h5>
-                                            <p class="text-gray-600 mb-4">It’s possible to simultaneously manage and
-                                                transform
-                                                information from one server to another.</p>
-                                            <a href="#"
-                                                class="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold">
-                                                Discover now <i class="fas fa-arrow-right ml-2"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Slide 3 -->
-                                <div class="swiper-slide p-4">
-                                    <div
-                                        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                                        <div class="relative">
-                                            <svg width="100" height="100" viewBox="0 0 64 64" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="8" y="12" width="48" height="36" rx="2" stroke="#2563EB"
-                                                    stroke-width="3" fill="#BFDBFE" />
-                                                <rect x="14" y="18" width="36" height="6" fill="#3B82F6" rx="1" />
-                                                <rect x="14" y="28" width="14" height="14" fill="#3B82F6" rx="1" />
-                                                <rect x="32" y="28" width="18" height="6" fill="#60A5FA" rx="1" />
-                                                <rect x="32" y="38" width="18" height="4" fill="#93C5FD" rx="1" />
-                                                <rect x="22" y="52" width="20" height="4" fill="#2563EB" rx="1" />
-                                                <line x1="32" y1="48" x2="32" y2="56" stroke="#1E40AF"
-                                                    stroke-width="2" />
-                                            </svg>
-                                        </div>
-                                        <div class="p-6">
-                                            <h5 class="text-lg font-semibold mb-2">Data Security</h5>
-                                            <p class="text-gray-600 mb-4">Back up your database, store in a safe and
-                                                secure place while
-                                                still maintaining its accessibility.</p>
-                                            <a href="#"
-                                                class="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold">
-                                                Discover now <i class="fas fa-arrow-right ml-2"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide p-4">
-                                    <div
-                                        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                                        <div class="relative">
-                                            <svg width="100" height="100" viewBox="0 0 64 64" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="8" y="12" width="48" height="36" rx="2" stroke="#2563EB"
-                                                    stroke-width="3" fill="#BFDBFE" />
-                                                <rect x="14" y="18" width="36" height="6" fill="#3B82F6" rx="1" />
-                                                <rect x="14" y="28" width="14" height="14" fill="#3B82F6" rx="1" />
-                                                <rect x="32" y="28" width="18" height="6" fill="#60A5FA" rx="1" />
-                                                <rect x="32" y="38" width="18" height="4" fill="#93C5FD" rx="1" />
-                                                <rect x="22" y="52" width="20" height="4" fill="#2563EB" rx="1" />
-                                                <line x1="32" y1="48" x2="32" y2="56" stroke="#1E40AF"
-                                                    stroke-width="2" />
-                                            </svg>
-                                        </div>
-                                        <div class="p-6">
-                                            <h5 class="text-lg font-semibold mb-2">Data Security</h5>
-                                            <p class="text-gray-600 mb-4">Back up your database, store in a safe and
-                                                secure place while
-                                                still maintaining its accessibility.</p>
-                                            <a href="#"
-                                                class="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold">
-                                                Discover now <i class="fas fa-arrow-right ml-2"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <!-- Swiper pagination -->
-                            <div class="swiper-pagination mt-4"></div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-        </div>
     </div>
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-        $(window).on('scroll', function () {
-            if ($(this).scrollTop() > 10) {
-                $('.main-navbar').addClass('bg-white shadow-md backdrop-blur-md');
-            } else {
-                $('.main-navbar').removeClass('bg-white shadow-md backdrop-blur-md');
-            }
+        const sideMenu = document.getElementById("sideMenu");
+        document.getElementById("sideToggleBtn").addEventListener("click", () => {
+            sideMenu.classList.remove("translate-x-full");
         });
-    </script>
+        document.getElementById("closeSideMenu").addEventListener("click", () => {
+            sideMenu.classList.add("translate-x-full");
+        });
 
+        // Dropdown toggle
+        document.querySelectorAll("[data-toggle]").forEach(button => {
+            button.addEventListener("click", () => {
+                const targetId = button.getAttribute("data-toggle");
+                const target = document.getElementById(targetId);
+                const icon = button.querySelector("svg");
 
-    <script>
+                if (target.classList.contains("open")) {
+                    target.classList.remove("open");
+                    icon.classList.remove("rotate-180");
+                    setTimeout(() => {
+                        target.classList.remove("mt-5");
+                    }, 400);
+                }
+                else {
+                    target.classList.add("open");
+                    icon.classList.add("rotate-180");
+                    target.classList.add("mt-5");
+                }
+            });
+        });
+
         const swiper = new Swiper('.mySwiper', {
             loop: true,
             autoplay: {
@@ -432,32 +870,74 @@
             },
         });
 
-        const featureswiper = new Swiper('.feature-swiper', {
-            slidesPerView: 3,
-            spaceBetween: 10,
-            loop: true,
-            loopedSlides: 4,
-            loopAdditionalSlides: 1,
+        const testimonialSwiper = new Swiper('.testimonialSwiper', {
+            slidesPerView: 2,
+            centeredSlides: true,
+            initialSlide: 1,
+            spaceBetween: 30,
+            loop: false,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
             },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 2,
+            on: {
+                init: function (swiper) {
+                    addSlideEffects(swiper);
                 },
-                1024: {
-                    slidesPerView: 3,
-                    loopedSlides: 4,
-                },
-            },
+                slideChangeTransitionEnd: addSlideEffects,
+            }
+        });
+
+        function addSlideEffects() {
+            document.querySelectorAll('.testimonialSwiper .swiper-slide').forEach(slide => {
+                slide.classList.remove('scale-100', 'blur-none', 'opacity-100');
+                slide.classList.add('scale-90', 'blur-sm', 'opacity-60');
+            });
+
+            const activeSlide = document.querySelector('.testimonialSwiper .swiper-slide-active');
+            if (activeSlide) {
+                activeSlide.classList.add('scale-100', 'blur-none', 'opacity-100');
+                activeSlide.classList.remove('scale-90', 'blur-sm', 'opacity-60');
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const counters = document.querySelectorAll("[data-count]");
+
+            const startCounting = (el, target) => {
+                let count = 0;
+                const duration = 2000;
+                const increment = target / (duration / 16);
+
+                const updateCount = () => {
+                    count += increment;
+                    if (count < target) {
+                        el.textContent = Math.floor(count);
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        el.textContent = target;
+                    }
+                };
+
+                updateCount();
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseInt(counter.getAttribute("data-count"));
+                        counter.textContent = "0"; // Reset before recount
+                        startCounting(counter, target);
+                    }
+                });
+            }, {
+                threshold: 0.6
+            });
+
+            counters.forEach(counter => observer.observe(counter));
         });
     </script>
-
 </body>
 
 </html>
