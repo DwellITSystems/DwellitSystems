@@ -15,6 +15,7 @@ tailwind.config = {
             colors: {
                 "primary": "rgba(var(--primary-color),1)",
                 "primary-foreground": "rgba(var(--primary-foreground),1)",
+                "secondary-color": "rgba(var(--secondary-color),1)",
                 "tertiary-color": "rgba(var(--tertiary-color),1)"
             },
             backgroundColor: {

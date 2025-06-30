@@ -1,7 +1,7 @@
 :root {
     --primary-color: 236, 114, 22;
     --primary-foreground: 255, 255, 255;
-    --secondary-color: 241, 245, 249;
+    --secondary-color: 246, 247, 255;
     --tertiary-color: 2, 132, 199;
 
     --primary-font-family: "Quicksand", sans-serif;
@@ -21,6 +21,10 @@
         box-sizing: border-box;
         scroll-snap-align: center;
         font-family: var(--primary-font-family);
+    }
+
+    body {
+        background-color: rgba(var(--secondary-color));
     }
 
     .main-wrapper {
