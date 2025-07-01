@@ -10,14 +10,14 @@
     <link rel="icon" href="">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
-
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/custom.css">
-    <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script type="text/javascript" src="/js/tailwind-3.4.16.js"></script>
     <script type="text/javascript" src="/js/tailwind.config.js"></script>
 </head>
@@ -25,11 +25,11 @@
 <body>
     <header class="relative z-50">
         <div id="mainNavbar" class="main-navbar fixed w-full top-0 bg-transparent z-50 transition-all duration-300">
-            <div class="container mx-auto px-4 py-4 xl:py-0">
+            <div class="container mx-auto px-4 xl:px-12 py-4 xl:py-0">
                 <div class="flex justify-between items-center space-x-0">
                     <div>
                         <a href="index.html">
-                            <img src="images/DwellITLogo.png" alt="DwellIT Logo" width="160" height="48">
+                            <img src="images/DwellITLogo.png" alt="DwellIT Logo" width="125" height="48">
                         </a>
                     </div>
 
@@ -99,19 +99,22 @@
                             Get In Touch
                         </a>
 
-                        <button id="sideToggleBtn" class="text-gray-600 xl:hidden focus:outline-none">
-                            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.19 12">
-                                <line x2="31.19" transform="translate(0 1)"
-                                    class="transition-transform duration-500 ease-in-out group-hover:translate-x-4"
+                        <!-- Add group class to the button -->
+                        <button id="sideToggleBtn" class="text-gray-600 xl:hidden focus:outline-none group">
+                            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.19 24">
+                                <!-- Top line moves right on hover -->
+                                <line x2="31.19" y1="1" y2="1"
+                                    class="transition-transform duration-500 ease-in-out group-hover:translate-x-3"
                                     fill="none" stroke="currentColor" stroke-width="2" />
-                                <line x2="41.19" transform="translate(0 11)"
-                                    class="transition-transform duration-500 ease-in-out group-hover:translate-y-2"
-                                    fill="none" stroke="currentColor" stroke-width="2" />
-                                <line x2="21.19" transform="translate(0 22)"
-                                    class="transition-transform duration-500 ease-in-out group-hover:translate-y-2"
+                                <line x2="41.19" y1="11" y2="11"
+                                    class="transition-transform duration-500 ease-in-out origin-left" fill="none"
+                                    stroke="currentColor" stroke-width="2" />
+                                <line x2="21.19" y1="21" y2="21"
+                                    class="transition-transform duration-500 ease-in-out group-hover:translate-x-5"
                                     fill="none" stroke="currentColor" stroke-width="2" />
                             </svg>
                         </button>
+
                     </div>
 
                 </div>
@@ -121,12 +124,19 @@
         <div id="sideMenu"
             class="xl:hidden fixed top-0 right-0 h-screen w-full xl:w-96 bg-white shadow-lg transform translate-x-full transition-transform duration-500 ease-in-out z-50 flex flex-col">
             <div class="p-6 overflow-y-auto flex-1">
-                <button id="closeSideMenu" class="absolute top-4 right-4 text-gray-600 hover:text-sky-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
+                <div class="w-full flex items-center justify-between">
+                    <a href="index.html">
+                        <img src="images/DwellITLogo.png" alt="DwellIT Logo" width="125" height="48">
+                    </a>
+                    <button id="closeSideMenu" class="text-gray-600 hover:text-sky-600 group">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-6 w-6 transition-transform duration-300 group-hover:rotate-90" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
 
                 <ul class="mt-12 space-y-6 text-lg font-medium text-gray-700">
                     <li><a href="#" class="block hover:text-sky-600">Home</a></li>
@@ -171,7 +181,6 @@
                 </ul>
             </div>
 
-            <!-- Fixed Bottom Social Icons -->
             <div class="p-6 border-t border-gray-200">
                 <div class="flex justify-center space-x-6 text-xl text-gray-600">
                     <a href="#" target="_blank" class="hover:text-blue-600">
@@ -191,27 +200,138 @@
         </div>
     </header>
 
-    <section class="w-full h-screen pt-20">
-        <div class="w-full flex">
-            <div class="w-3/6">s</div>
-            <div class="w-3/6">
-                <video src="/videos/banner-video.mp4" autoplay="" loop="" playsinline="" height="760"
-                    width="780"></video>
+    <section class="w-full min-h-screen h-full pt-20 relative">
+        <div class="w-full h-full flex xl:flex-row flex-col-reverse relative xl:absolute xl:top-0">
+            <div class="w-full xl:w-1/2 px-12 py-8 xl:py-0">
+                <div class="w-full h-full flex justify-center flex-col" data-aos="fade-down" data-aos-duration="1000">
+                    <h2 class="text-4xl xl:text-5xl xl:leading-snug">
+                        Trusted <b>software development company</b> since <b>2025</b>
+                    </h2>
+                    <p class="mt-10">
+                        With 25+ years of experience and 1,000+ professionals on board, we combine profound tech
+                        knowledge and solid business
+                        expertise to deliver tailored solutions powering enterprises, SMBs, and startups.
+                    </p>
+                </div>
+            </div>
+            <div class="relative w-full xl:w-3/6 bg-transparent video-section" data-aos="fade-down"
+                data-aos-duration="1000">
+                <svg xmlns="http://www.w3.org/2000/svg">
+                    <mask id="text-mask" maskUnits="userSpaceOnUse">
+                        <rect width="100%" height="100%" fill="black" />
+                        <text x="50%" id="" y="50%" dy=".100em"
+                            class="max-md:text-[400px] max-lg:text-[100vh] xl:text-[100vh]" font-weight="bold"
+                            text-anchor="middle" dominant-baseline="middle" fill="white" font-family="Arial">
+                            D
+                        </text>
+                    </mask>
+                </svg>
+                <video class="w-full h-auto video-mask" src="/videos/banner-video.mp4" autoplay loop muted
+                    playsinline></video>
             </div>
         </div>
     </section>
 
-    <section class="w-full h-screen"></section>
+    <section class="h-[256vh] bg-black relative">
+        <div id="stickyScroll" class="sticky top-0 h-screen flex items-center justify-center px-8">
+            <h1 id="scrollText"
+                class="xl:text-3xl font-roboto text-1xl xl:gap-2 justify-center font-normal text-gray-100 flex flex-wrap leading-relaxed text-center max-w-6xl">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium exercitationem corrupti vel
+                perferendis
+                itaque doloribus veritatis saepe sed eaque explicabo, atque minima libero.
+            </h1>
+        </div>
+    </section>
+
+    <section class="w-full">
+        <div x-data="{ active: 1 }" class="flex flex-col md:flex-row w-full min-h-screen">
+
+            <!-- Panel 1 -->
+            <div @click="active = 1" class="transition-all duration-500 ease-in-out overflow-hidden border 
+                flex flex-col items-center justify-start cursor-pointer bg-white
+                md:h-auto" :class="{
+            'md:w-3/4 w-full': active === 1,
+            'md:w-1/6 w-full': active !== 1
+         }">
+
+                <span x-show="active !== 1"
+                    class="text-lg font-bold py-4 text-center md:py-0 md:absolute h-full md:[writing-mode:vertical-lr] md:rotate-180">
+                    Panel 1
+                </span>
+
+
+                <div x-show="active === 1" x-transition class="p-6">
+                    <h2 class="text-2xl text-sky-600 font-semibold">Panel 1 Title</h2>
+                    <p class="mt-4 text-gray-700">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, vero.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Panel 2 -->
+            <div @click="active = 2" class="transition-all duration-500 ease-in-out overflow-hidden border 
+                flex flex-col items-center justify-start cursor-pointer bg-green-500 text-white
+                md:h-auto" :class="{
+            'md:w-3/4 w-full': active === 2,
+            'md:w-1/6 w-full': active !== 2
+         }">
+
+                <span x-show="active !== 2"
+                    class="text-lg font-bold text-center py-4 md:py-0 md:absolute h-full md:[writing-mode:vertical-lr] md:rotate-180">
+                    Panel 2
+                </span>
+
+                <div x-show="active === 2" x-transition class="p-6">
+                    <h2 class="text-2xl font-semibold">Panel 2 Title</h2>
+                    <p class="mt-4">
+                        Content for panel 2 goes here.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Panel 3 -->
+            <div @click="active = 3" class="transition-all duration-500 ease-in-out overflow-hidden border 
+                flex flex-col items-center justify-start cursor-pointer bg-purple-500 text-white
+                md:h-auto" :class="{
+            'md:w-3/4 w-full': active === 3,
+            'md:w-1/6 w-full': active !== 3
+         }">
+
+                <span x-show="active !== 3"
+                    class="text-lg font-bold text-center  py-4 md:py-0 md:absolute h-full md:[writing-mode:vertical-lr] md:rotate-180">
+                    Panel 3
+                </span>
+
+                <div x-show="active === 3" x-transition class="p-6">
+                    <h2 class="text-2xl font-semibold">Panel 3 Title</h2>
+                    <p class="mt-4">
+                        Content for panel 3 goes here.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
 
     <script>
+        AOS.init();
+
         const navbar = document.getElementById('mainNavbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 10) {
-                navbar.classList.remove('bg-secondary-color');
+                navbar.classList.remove('bg-transparent');
                 navbar.classList.add('bg-white', 'shadow-md');
             } else {
                 navbar.classList.remove('bg-white', 'shadow-md');
-                navbar.classList.add('bg-secondary-color');
+                navbar.classList.add('bg-transparent');
             }
         });
 
@@ -242,6 +362,37 @@
                     icon.classList.add("rotate-180");
                     target.classList.add("mt-5");
                 }
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const textEl = document.getElementById("scrollText");
+            const words = textEl.innerText.trim().split(/\s+/);
+            textEl.innerHTML = words
+                .map(word => `<span class="inline-block mr-2 opacity-100 text-gray-600">${word}</span>`)
+                .join(" ");
+
+            const wordSpans = textEl.querySelectorAll("span");
+
+            gsap.registerPlugin(ScrollTrigger);
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#stickyScroll",
+                    start: "top top",
+                    end: "+=1000", // how long the scroll effect lasts
+                    scrub: true,
+                    pin: true,     // this pins the section
+                    anticipatePin: 1
+                }
+            });
+
+            wordSpans.forEach((span, i) => {
+                tl.to(span, {
+                    color: "#0284c7",
+                    duration: 0.1,
+                    ease: "power1.inOut"
+                }, i * 0.05);
             });
         });
     </script>

@@ -2,7 +2,8 @@ tailwind.config = {
     theme: {
         extend: {
             fontFamily: {
-                lato: ['Quicksand', 'sans-serif'],
+                lato: ['Lato', 'sans-serif'],
+                roboto: ['Roboto', 'sans-serif'],
             },
             maxHeight: {
                 '0': '0',
