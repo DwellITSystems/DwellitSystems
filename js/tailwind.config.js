@@ -17,7 +17,8 @@ tailwind.config = {
                 "primary": "rgba(var(--primary-color),1)",
                 "primary-foreground": "rgba(var(--primary-foreground),1)",
                 "secondary-color": "rgba(var(--secondary-color),1)",
-                "tertiary-color": "rgba(var(--tertiary-color),1)"
+                "tertiary-color": "rgba(var(--tertiary-color),1)",
+                "bg-color": "rgba(var(--bg-color),1)"
             },
             backgroundColor: {
                 'nav-scrolled': 'rgba(255, 255, 255, 0.95)',
