@@ -18,7 +18,7 @@ tailwind.config = {
                 "primary-foreground": "rgba(var(--primary-foreground),1)",
                 "secondary-color": "rgba(var(--secondary-color),1)",
                 "tertiary-color": "rgba(var(--tertiary-color),1)",
-                "bg-color": "rgba(var(--bg-color),1)"
+                "main-bg-color": "rgba(var(--bg-color),1)"
             },
             backgroundColor: {
                 'nav-scrolled': 'rgba(255, 255, 255, 0.95)',
@@ -26,24 +26,14 @@ tailwind.config = {
             translate: {
 
             },
-            animation: {
-                fadeInDown: 'fadeInDown 0.5s ease-out forwards',
-                fadeInUp: 'fadeInUp 0.5s ease-out forwards',
-                animationSliderText: 'fadeInDown 1s ease-out forwards'
-            },
             keyframes: {
-                fadeInDown: {
-                    '0%': { opacity: '0', transform: 'translateY(-40px)' },
-                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                marquee: {
+                    '0%': { transform: 'translateX(100%)' },
+                    '100%': { transform: 'translateX(-100%)' },
                 },
-                fadeInUp: {
-                    '0%': { opacity: '0', transform: 'translate3d(0, 20px, 0)' },
-                    '100%': { opacity: '1', transform: 'none' },
-                },
-                animationSliderText: {
-                    '0%': { opacity: '0', transform: 'translateY(-100px)' },
-                    '100%': { opacity: '1', transform: 'translateY(0)' },
-                }
+            },
+            animation: {
+                marquee: 'marquee 25s linear infinite',
             },
             fontSize: {
 
