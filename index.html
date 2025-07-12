@@ -213,7 +213,7 @@
         <div class="container mx-auto px-4 xl:px-12 flex xl:flex-row flex-col-reverse relative ">
             <div class="w-full">
                 <div class="w-full h-full flex justify-center flex-col" data-aos="fade-down" data-aos-duration="1000">
-                    <h2 class="text-2xl xl:text-5xl xl:leading-snug font-roboto font-light">
+                    <h2 class="text-2xl xl:text-5xl font-roboto font-light">
                         End-to-End <b class="text-sky-600"> Digital Solutions,</b> Built for Businesses <b
                             class="text-sky-600">That Mean Business.</b>
                     </h2>
@@ -225,7 +225,7 @@
                     </p>
 
                     <div class="w-full mt-10 flex gap-2">
-                        <a href="#"
+                        <a href="#scroll-content"
                             class="group relative font-light text-base font-roboto hidden xl:inline-flex items-center text-sky-600 border border-sky-600 px-9 py-2 rounded-full overflow-hidden transition duration-300 hover:text-white">
 
                             <span
@@ -263,7 +263,7 @@
         </div>
     </section>
 
-    <section class="h-[256vh] bg-main-bg-color relative">
+    <section class="h-[256vh] bg-main-bg-color relative" id="scroll-content">
         <div id="stickyScroll" class="sticky top-0 h-screen flex items-center justify-center px-4 xl:px-8">
             <h1 id="scrollText"
                 class="xl:text-4xl font-roboto text-2xl xl:gap-2 justify-center font-light text-gray-100 flex flex-wrap leading-relaxed text-center max-w-6xl">
@@ -273,25 +273,21 @@
         </div>
     </section>
 
-    <section class="w-full py-20" data-aos="fade-down" data-aos-duration="1000">
+    <section class="w-full pt-20" data-aos="fade-down" data-aos-duration="1000">
         <div class="w-full text-center mb-10 px-4 xl:px-16">
             <div class="container mx-auto">
                 <h3 class="text-gray-900 text-2xl xl:text-4xl font-extralight uppercase font-roboto">
                     What We Are Offering!</h3>
-                <p class="mt-4 text-gray-500 font-roboto font-light">Unlock business efficiency, scalability, and growth
+                <p class="mt-6 text-gray-500 font-roboto font-light">Unlock business efficiency, scalability, and growth
                     with a complete suite of digital solutions — from custom software to cloud and infrastructure
                     services. Designed for real-world operations and tailored to your unique business needs, these
                     services empower you to streamline workflows, elevate customer experience, and future-proof your
                     operations.
 
-                    <br>
-
                     We offers a complete suite of technology services designed to streamline operations, reduce
                     friction, and accelerate business growth. From engaging websites and mobile apps to advanced ERP,
                     CRM, and transport management platforms, each solution is built with real-world business goals in
                     mind — improving efficiency, enhancing user experience, and providing measurable impact.
-
-                    <br>
                 </p>
             </div>
         </div>
@@ -303,52 +299,60 @@
                         title: 'Website Development',
                         content: 'High-performance, responsive websites tailored to reflect your brand, improve search visibility, and drive conversions across devices. Designed to engage users, showcase your offerings, and support business goals with seamless user experience.',
                         image: '/images/demo-img.jpg',
-                        bgColor: 'bg-white text-black'
+                        bgColor: 'bg-white text-black',
+                        url:'website-development.html'
                     },
                     {
                         title: 'Transport Management System (FreightOps)',
                         content: 'A logistics-focused digital platform enabling real-time fleet tracking, route planning, driver management, and expense control — ensuring faster deliveries and better margins.',
                         image: '/images/demo-img.jpg',
-                        bgColor: 'bg-white text-black'
+                        bgColor: 'bg-white text-black',
+                        url:'tms.html'
                     },
                     {
                         title: 'Custom ERP & CRM Development',
                         content: 'Integrated business systems built to manage operations, finance, and customer relationships from one place. Improve decision-making, automate workflows, and create a 360° view of business activity.',
                         image: '/images/demo-img.jpg',
-                        bgColor: 'bg-white text-black'
+                        bgColor: 'bg-white text-black',
+                        url:'erp-crm.html'
                     },
                     {
                         title: 'Email & Storage Solutions',
                         content: 'Enterprise-grade email systems with integrated cloud storage — enabling secure, reliable communication, file sharing, and data access across teams and devices.',
                         image: '/images/demo-img.jpg',
-                        bgColor: 'bg-white text-black'
+                        bgColor: 'bg-white text-black',
+                        url:'email.html'
                     },
                     {
                         title: 'Cloud Services',
                         content: 'Secure and scalable cloud hosting, storage, and compute services that simplify IT management, enhance performance, and support modern application deployment.',
                         image: '/images/demo-img.jpg',
-                        bgColor: 'bg-white text-black'
+                        bgColor: 'bg-white text-black',
+                        url:'cloud-services.html'
                     },
                     {
                         title: 'IT Infrastructure Services',
                         content: 'End-to-end infrastructure solutions including network setup, server management, virtualization, and security — optimized for uptime, speed, and operational resilience.',
                         image: '/images/demo-img.jpg',
-                        bgColor: 'bg-white text-black'
+                        bgColor: 'bg-white text-black',
+                        url:'it-infrastructure-services.html'
                     },
                     {
                         title: 'Custom Web Applications',
                         content: 'Interactive, cloud-based applications built to scale with your business. Automate tasks, manage workflows, and create digital-first customer experiences accessible from any device.',
                         image: '/images/demo-img.jpg',
-                        bgColor: 'bg-white text-black'
+                        bgColor: 'bg-white text-black',
+                        url:'web-app.html'
                     },
                     {
                         title: 'Mobile App Development',
                         content: 'Custom mobile applications engineered for Android and iOS platforms — delivering smooth user journeys, fast performance, and real-world usability that enhances engagement and customer loyalty.',
                         image: '/images/demo-img.jpg',
-                        bgColor: 'bg-white text-black'
+                        bgColor: 'bg-white text-black',
+                        url:'mobile-app.html'
                     }
                 ]
-            }" class="flex flex-col md:flex-row w-full min-h-[60vh] flex-wrap md:flex-nowrap mt-12">
+            }" class="flex flex-col md:flex-row w-full min-h-[60vh] flex-wrap md:flex-nowrap mt-16">
             <template x-for="(panel, index) in panels" :key="index">
                 <div @click="active = index + 1" class="relative transition-all duration-500 ease-in-out overflow-hidden border border-l-0
                            flex flex-col items-center justify-start cursor-pointer"
@@ -371,7 +375,7 @@
                         <div class="w-full md:w-full p-6 flex justify-center flex-col">
                             <h2 class="text-3xl font-semibold font-roboto" x-text="panel.title"></h2>
                             <p class="mt-4 font-light text-lg" x-text="panel.content"></p>
-                            <a href="services.html" target="_blank"
+                            <a :href="panel.url"
                                 class="mt-5 inline-flex items-center text-blue-600 font-medium hover:underline group transition-all duration-300">
                                 Explore
                                 <svg class="ml-2 transform transition-transform duration-300 group-hover:translate-x-1"
@@ -387,8 +391,7 @@
         </div>
     </section>
 
-
-    <section class="w-full min-h-screen h-full flex items-center border-b">
+    <section class="w-full min-h-screen h-full flex items-center bg-white border-b">
         <div class="px-4 xl:px-12 container mx-auto" data-aos="fade-down" data-aos-duration="1000">
             <div class="w-full text-center mb-10">
                 <h3 class="text-gray-900 text-2xl xl:text-4xl font-extralight uppercase font-roboto">
@@ -396,7 +399,7 @@
                     real-world businesses
                 </h3>
 
-                <p class="mt-4 text-gray-500 font-roboto font-light">Empower your business with a complete suite of
+                <p class="mt-6 text-gray-500 font-roboto font-light">Empower your business with a complete suite of
                     digital solutions — from websites, mobile apps, ERP, CRM, and transport systems to cloud,
                     infrastructure, and custom software services. Designed for real-world operations, these solutions
                     streamline workflows, enhance user experience, and accelerate growth. Cloud-enabled tools boost team
@@ -410,28 +413,28 @@
 
                     <!-- Static text items -->
                     <li
-                        class="group relative inline-block px-12 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
+                        class="group relative inline-block px-8 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
                         <span class="relative z-10 group-hover:text-white transition duration-300">ERP</span>
                         <span
                             class="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-in-out z-0 rounded-full"></span>
                     </li>
 
                     <li
-                        class="group relative inline-block px-12 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
+                        class="group relative inline-block px-8 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
                         <span class="relative z-10 group-hover:text-white transition duration-300">CRM</span>
                         <span
                             class="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-in-out z-0 rounded-full"></span>
                     </li>
 
                     <li
-                        class="group relative inline-block px-12 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
+                        class="group relative inline-block px-8 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
                         <span class="relative z-10 group-hover:text-white transition duration-300">CMS</span>
                         <span
                             class="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-in-out z-0 rounded-full"></span>
                     </li>
 
                     <li
-                        class="group relative inline-block px-12 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
+                        class="group relative inline-block px-8 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
                         <span class="relative z-10 group-hover:text-white transition duration-300">TMS (Transport
                             Management System)</span>
                         <span
@@ -439,101 +442,104 @@
                     </li>
 
                     <li
-                        class="group relative inline-block px-12 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
+                        class="group relative inline-block px-8 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
                         <span class="relative z-10 group-hover:text-white transition duration-300">Webapps</span>
                         <span
                             class="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-in-out z-0 rounded-full"></span>
                     </li>
 
                     <li
-                        class="group relative inline-block px-12 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
+                        class="group relative inline-block px-8 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
                         <span class="relative z-10 group-hover:text-white transition duration-300">Mobile Apps</span>
                         <span
                             class="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-in-out z-0 rounded-full"></span>
                     </li>
 
                     <li
-                        class="group relative inline-block px-12 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
+                        class="group relative inline-block px-8 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
                         <span class="relative z-10 group-hover:text-white transition duration-300">Cloud Services</span>
                         <span
                             class="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-in-out z-0 rounded-full"></span>
                     </li>
 
                     <li
-                        class="group relative inline-block px-12 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
-                        <span class="relative z-10 group-hover:text-white transition duration-300">Infrastructure Services</span>
+                        class="group relative inline-block px-8 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
+                        <span class="relative z-10 group-hover:text-white transition duration-300">Infrastructure
+                            Services</span>
                         <span
                             class="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-in-out z-0 rounded-full"></span>
                     </li>
 
                     <li
-                        class="group relative inline-block px-12 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
+                        class="group relative inline-block px-8 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
                         <span class="relative z-10 group-hover:text-white transition duration-300">Email</span>
                         <span
                             class="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-in-out z-0 rounded-full"></span>
                     </li>
 
                     <li
-                        class="group relative inline-block px-12 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
+                        class="group relative inline-block px-8 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
                         <span class="relative z-10 group-hover:text-white transition duration-300">Storage</span>
                         <span
                             class="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-in-out z-0 rounded-full"></span>
                     </li>
 
                     <li
-                        class="group relative inline-block px-12 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
+                        class="group relative inline-block px-8 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
                         <span class="relative z-10 group-hover:text-white transition duration-300">UI/UX</span>
                         <span
                             class="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-in-out z-0 rounded-full"></span>
                     </li>
 
                     <li
-                        class="group relative inline-block px-12 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
-                        <span class="relative z-10 group-hover:text-white transition duration-300">Artificial Intelligence Integration (AI)</span>
+                        class="group relative inline-block px-8 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
+                        <span class="relative z-10 group-hover:text-white transition duration-300">Artificial
+                            Intelligence Integration (AI)</span>
                         <span
                             class="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-in-out z-0 rounded-full"></span>
                     </li>
 
                     <li
-                        class="group relative inline-block px-12 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
+                        class="group relative inline-block px-8 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
                         <span class="relative z-10 group-hover:text-white transition duration-300">Automation</span>
                         <span
                             class="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-in-out z-0 rounded-full"></span>
                     </li>
 
                     <li
-                        class="group relative inline-block px-12 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
+                        class="group relative inline-block px-8 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
                         <span class="relative z-10 group-hover:text-white transition duration-300">Hosting</span>
                         <span
                             class="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-in-out z-0 rounded-full"></span>
                     </li>
                     <li
-                        class="group relative inline-block px-12 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
+                        class="group relative inline-block px-8 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
                         <span class="relative z-10 group-hover:text-white transition duration-300">Database</span>
                         <span
                             class="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-in-out z-0 rounded-full"></span>
                     </li>
                     <li
-                        class="group relative inline-block px-12 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
+                        class="group relative inline-block px-8 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
                         <span class="relative z-10 group-hover:text-white transition duration-300">Security</span>
                         <span
                             class="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-in-out z-0 rounded-full"></span>
                     </li>
                     <li
-                        class="group relative inline-block px-12 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
+                        class="group relative inline-block px-8 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
                         <span class="relative z-10 group-hover:text-white transition duration-300">Consulting</span>
                         <span
                             class="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-in-out z-0 rounded-full"></span>
                     </li>
                     <li
-                        class="group relative inline-block px-12 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
+                        class="group relative inline-block px-8 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
                         <span class="relative z-10 group-hover:text-white transition duration-300">IT Support</span>
                         <span
                             class="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-in-out z-0 rounded-full"></span>
                     </li>
                     <li
-                        class="group relative inline-block px-12 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
-                        <span class="relative z-10 group-hover:text-white transition duration-300">Progressive Apps</span>
+                        class="group relative inline-block px-8 py-2 text-sm font-roboto font-normal border border-gray-400 group-hover:border-sky-600 text-gray-600 bg-gray-100 rounded-full overflow-hidden transition-colors duration-300">
+                        <span class="relative z-10 group-hover:text-white transition duration-300">Progressive
+                            Apps</span>
                         <span
                             class="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-in-out z-0 rounded-full"></span>
                     </li>
