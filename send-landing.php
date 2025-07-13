@@ -28,12 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Sender & Recipient
         $mail->setFrom('notifications@dwellitsystems.com', 'Website Notification');
-        $mail->addAddress('emmanual.nebu@dwellitsystems.com', 'Website Request');
-
-        // Attach Resume File
-        if (isset($_FILES['resume']) && $_FILES['resume']['error'] == UPLOAD_ERR_OK) {
-            $mail->addAttachment($_FILES['resume']['tmp_name'], $_FILES['resume']['name']);
-        }
+        $mail->addAddress('emmanual.nebu@dwellitsystems.com', 'Website Request');    
 
         // Email Content
         $mail->isHTML(true);

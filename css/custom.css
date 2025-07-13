@@ -22,6 +22,7 @@
         box-sizing: border-box;
         scroll-snap-align: center;
         font-family: var(--primary-font-family);
+        scroll-behavior: smooth;
     }
 
     body {
@@ -67,7 +68,6 @@
     height: 100%;
     object-fit: cover;
 
-    /* Mask the video using the image */
     mask-image: url('/images/bg-d.png');
     -webkit-mask-image: url('/images/bg-d.png');
 
