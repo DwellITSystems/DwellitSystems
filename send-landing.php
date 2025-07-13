@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Email Content
         $mail->isHTML(true);
-        $mail->Subject = 'New Carrer Form Message';
+        $mail->Subject = 'Landing Page';
         $mail->Body = '
             <html>
             <head>
