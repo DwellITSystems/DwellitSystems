@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Sender & Recipient
         $mail->setFrom('notifications@dwellitsystems.com', 'Website Notification');
-        $mail->addAddress('emmanual.nebu@dwellitsystems.com', 'Website Request');    
+        $mail->addAddress('emmanual.nebu@dwellitsystems.com', 'Website Landing Page Request');    
 
         // Email Content
         $mail->isHTML(true);
