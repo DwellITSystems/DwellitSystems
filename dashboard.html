@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DwellIT - Systems</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script type="text/javascript" src="js/tailwind-3.4.16.js"></script>
+    <script type="text/javascript" src="js/tailwind.config.js"></script>
+</head>
+
+<body>
+    <header class="relative z-50">
+        <div id="mainNavbar" class="main-navbar fixed w-full top-0 z-50 transition-all duration-300 bg-transparent">
+            <div class="container mx-auto px-4 xl:px-12 py-4 xl:py-0">
+                <div class="flex justify-between items-center space-x-0">
+                    <div>
+                        <a href="index.html">
+                            <img src="images/DwellITLogo.png" alt="DwellIT Logo" width="125" height="48">
+                        </a>
+                    </div>
+
+                    <nav id="nav" class="hidden xl:flex space-x-12 ml-auto font-roboto text-white">
+                        <div class="relative group py-6 px-2">
+                            <a href="index.html"
+                                class="font-normal text-base font-roboto relative group-hover:text-sky-600">
+                                Home
+                                <span
+                                    class="absolute left-0 top-11 w-0 h-1 bg-sky-600 transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </div>
+
+                        <div class="relative group py-6 cursor-pointer">
+                            <a href="#"
+                                class="font-normal text-base font-roboto flex items-center gap-2 relative group-hover:text-sky-600">
+                                Company
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                                <span
+                                    class="absolute left-0 top-11 w-0 h-1 bg-sky-600 transition-all duration-700 group-hover:w-full"></span>
+                            </a>
+                            <ul
+                                class="font-normal text-base font-roboto  absolute left-0 mt-6 text-gray-600 bg-white border shadow-lg w-72 opacity-0 invisible transform -translate-y-10 transition-all duration-700 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
+                                <li><a href="about-us.html" class="block px-4 py-2 hover:bg-gray-100">About Us</a></li>
+                                <li><a href="about-us.html#why-choose-section"
+                                        class="block px-4 py-2 hover:bg-gray-100">Why
+                                        Choose us</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="relative group py-6">
+                            <a href="#"
+                                class="font-normal text-base font-roboto  flex items-center gap-2 relative group-hover:text-sky-600">
+                                IT Solutions
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                                <span
+                                    class="absolute left-0 top-11 w-0 h-1 bg-sky-600 transition-all duration-700 group-hover:w-full"></span>
+                            </a>
+                            <ul
+                                class="font-normal text-base font-roboto  absolute left-0 mt-6 text-gray-600 bg-white border shadow-lg w-72 opacity-0 invisible transform -translate-y-10 transition-all duration-700 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
+                                <li><a href="website-development.html" class="block px-4 py-2 hover:bg-gray-100">Website
+                                        Development</a></li>
+                                <li><a href="tms.html" class="block px-4 py-2 hover:bg-gray-100">Transport Management
+                                        System</a></li>
+                                <li><a href="erp-crm.html" class="block px-4 py-2 hover:bg-gray-100">Custom ERP &amp;
+                                        CRM
+                                        Development</a></li>
+                                <li><a href="email.html" class="block px-4 py-2 hover:bg-gray-100">Email &amp; Storage
+                                        Solutions</a>
+                                </li>
+                                <li><a href="cloud-services.html" class="block px-4 py-2 hover:bg-gray-100">Cloud
+                                        Services</a></li>
+                                <li><a href="it-infrastructure-services.html"
+                                        class="block px-4 py-2 hover:bg-gray-100">IT
+                                        Infrastructure Services</a></li>
+                                <li><a href="web-app.html" class="block px-4 py-2 hover:bg-gray-100">Custom Web
+                                        Applications</a></li>
+                                <li><a href="mobile-app.html" class="block px-4 py-2 hover:bg-gray-100">Mobile App
+                                        Development</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="relative group py-6">
+                            <a href="index.html#portfolio"
+                                class="font-normal text-base font-roboto  relative group-hover:text-sky-600">
+                                Portfolio
+                                <span
+                                    class="absolute left-0 top-11 w-0 h-1 bg-sky-600 transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </div>
+
+                        <div class="relative group py-6">
+                            <a href="careers.html"
+                                class="font-normal text-base font-roboto  relative group-hover:text-sky-600">
+                                Careers
+                                <span
+                                    class="absolute left-0 top-11 w-0 h-1 bg-sky-600 transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </div>
+
+                        <div class="relative group py-6">
+                            <a href="contact-us.html"
+                                class="font-normal text-base font-roboto  relative group-hover:text-sky-600">
+                                Contact Us
+                                <span
+                                    class="absolute left-0 top-11 w-0 h-1 bg-sky-600 transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </div>
+                    </nav>
+
+                    <div class="flex items-center space-x-4">
+                        <a href="landing.html"
+                            class="group font-light text-base font-roboto hidden xl:inline-flex items-center bg-sky-600 text-white px-6 py-2 rounded-full hover:bg-sky-700 transition duration-300 shadow-md">
+                            Get In Touch
+
+                            <svg class="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+
+                        <button id="sideToggleBtn" class="text-gray-600 xl:hidden focus:outline-none group">
+                            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.19 24">
+                                <!-- Top line moves right on hover -->
+                                <line x2="31.19" y1="1" y2="1"
+                                    class="transition-transform duration-500 ease-in-out group-hover:translate-x-3"
+                                    fill="none" stroke="currentColor" stroke-width="2"></line>
+                                <line x2="41.19" y1="11" y2="11"
+                                    class="transition-transform duration-500 ease-in-out origin-left" fill="none"
+                                    stroke="currentColor" stroke-width="2"></line>
+                                <line x2="21.19" y1="21" y2="21"
+                                    class="transition-transform duration-500 ease-in-out group-hover:translate-x-5"
+                                    fill="none" stroke="currentColor" stroke-width="2"></line>
+                            </svg>
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="sideMenu"
+            class="xl:hidden fixed top-0 right-0 h-screen w-full xl:w-96 bg-white shadow-lg transform translate-x-full transition-transform duration-500 ease-in-out z-50 flex flex-col">
+            <div class="p-6 overflow-y-auto flex-1">
+                <div class="w-full flex items-center justify-between">
+                    <a href="index.html">
+                        <img src="images/DwellITLogo.png" alt="DwellIT Logo" width="125" height="48">
+                    </a>
+                    <button id="closeSideMenu" class="text-gray-600 hover:text-sky-600 group">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-6 w-6 transition-transform duration-300 group-hover:rotate-90" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+
+                <ul class="mt-12 space-y-6 text-md font-medium text-gray-700">
+                    <li><a href="index.html" class="block hover:text-sky-600">Home</a></li>
+                    <li>
+                        <button class="flex justify-between items-center w-full text-left hover:text-sky-600"
+                            data-toggle="companyMenu">
+                            Company
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-4 h-4 transform transition-transform duration-300" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </button>
+                        <ul id="companyMenu" class="slide-toggle ml-4 space-y-4 text-sm text-gray-600">
+                            <li><a href="about-us.html" class="block hover:text-sky-600">About Us</a></li>
+                            <li>
+                                <a href="about-us.html#why-choose-section" class="block hover:text-sky-600">Why choose
+                                    us</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button class="flex justify-between items-center w-full text-left hover:text-sky-600"
+                            data-toggle="itMenu">
+                            IT Solutions
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-4 h-4 transform transition-transform duration-300" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </button>
+                        <ul id="itMenu" class="slide-toggle ml-4 space-y-4 text-sm text-gray-600">
+                            <li><a href="website-development.html" class="block hover:text-sky-600">Website
+                                    Development</a></li>
+                            <li><a href="tms.html" class="block hover:text-sky-600">Transport Management System</a></li>
+                            <li><a href="erp-crm.html" class="block hover:text-sky-600">Custom ERP &amp; CRM
+                                    Development</a>
+                            </li>
+                            <li><a href="email.html" class="block hover:text-sky-600">Email &amp; Storage Solutions</a>
+                            </li>
+                            <li><a href="cloud-services.html" class="block hover:text-sky-600">Cloud Services</a></li>
+                            <li><a href="it-infrastructure-services.html" class="block hover:text-sky-600">IT
+                                    Infrastructure Services</a></li>
+                            <li><a href="web-app.html" class="block hover:text-sky-600">Custom Web Applications</a></li>
+                            <li><a href="mobile-app.html" class="block hover:text-sky-600">Mobile App Development</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#portfolio" class="block hover:text-sky-600">Portfolio</a></li>
+                    <li><a href="careers.html" class="block hover:text-sky-600">Careers</a></li>
+                    <li><a href="contact-us.html" class="block hover:text-sky-600">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="p-6 border-t border-gray-200">
+                <div class="flex justify-center space-x-6 text-xl text-gray-600">
+                    <a href="#" target="_blank" class="hover:text-blue-600">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" target="_blank" class="hover:text-sky-400">
+                        <i class="fab fa-x"></i>
+                    </a>
+                    <a href="#" target="_blank" class="hover:text-blue-700">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" target="_blank" class="hover:text-pink-500">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative top-0 w-full h-[50vh] flex items-center justify-center" data-aos="fade-down"
+        data-aos-duration="1000">
+        <img src="images/dashboard-banner.jpg" alt="Banner" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black opacity-70 z-0"></div>
+        <div class="absolute inset-0 flex items-center justify-center z-10">
+            <h1 class="text-white text-3xl md:text-5xl font-bold uppercase tracking-wider text-center">Dashboard
+                Overview</h1>
+        </div>
+    </section>
+
+    <section class="w-full px-6 xl:px-20 pt-6 pb-12 xl:py-16">
+        <div class="w-full py-6" data-aos="fade-down" data-aos-duration="1000">
+            <h3 class="text-gray-900 text-2xl xl:text-4xl font-extralight  xl:text-center uppercase font-roboto">
+                What We Are <span class="text-sky-600 font-bold">Offering!</span>
+            </h3>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 pt-2 font-roboto">
+            <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition duration-300 space-y-3"
+                data-aos="fade-down" data-aos-duration="500">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-gradient-to-tr from-sky-500 to-blue-600 text-white p-3 rounded-full shadow-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1H4a1 1 0 01-1-1V4z" />
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8 10h.01M12 10h.01M16 10h.01M8 14h8" />
+                        </svg>
+                    </div>
+                    <h2 class="text-lg font-semibold text-gray-900">Website Development</h2>
+                </div>
+
+                <p class="text-sm font-normal text-gray-800">Build modern, responsive websites that showcase your brand
+                    and engage visitors effectively.</p>
+
+                <a href="website-development.html"
+                    class="group font-normal text-sm font-roboto flex items-center text-sky-600 px-0 py-2 transition duration-300 underline">
+                    View details
+
+                    <svg class="ml-2 w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition duration-300 space-y-3"
+                data-aos="fade-down" data-aos-duration="1000">
+                <div class="flex items-center space-x-3">
+                    <div
+                        class="bg-gradient-to-tr from-blue-600 to-blue-400 text-white p-3 rounded-full shadow-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="5" rx="2" ry="2" stroke-linejoin="round" />
+                            <path d="M6 11v-3a3 3 0 016 0v3" stroke-linecap="round" stroke-linejoin="round" />
+                            <circle cx="7.5" cy="17.5" r="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <circle cx="16.5" cy="17.5" r="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h2 class="text-lg font-semibold text-gray-900">Transport Management System</h2>
+                </div>
+
+                <p class="text-sm font-normal text-gray-800">FreightOps is a purpose-built solution for transport and
+                    logistics operations.</p>
+
+                <a href="tms.html"
+                    class="group font-normal text-sm font-roboto flex items-center text-sky-600 px-0 py-2 transition duration-300 underline">
+                    View details
+
+                    <svg class="ml-2 w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition duration-300 space-y-3"
+                data-aos="fade-down" data-aos-duration="1500">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-gradient-to-tr from-indigo-500 to-purple-600 text-white p-3 rounded-full shadow-lg">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4 4h6v6H4V4zm0 10h6v6H4v-6zm10-10h6v6h-6V4zm0 10h6v6h-6v-6z" />
+                        </svg>
+                    </div>
+                    <h2 class="text-lg font-semibold text-gray-900">Custom ERP & CRM Development</h2>
+                </div>
+
+                <p class="text-sm font-normal text-gray-800">
+                    Our tailored ERP and CRM systems centralize sales, inventory, and customer support.</p>
+
+                <a href="erp-crm.html"
+                    class="group font-normal text-sm font-roboto flex items-center text-sky-600 px-0 py-2 transition duration-300 underline">
+                    View details
+
+                    <svg class="ml-2 w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition duration-300 space-y-3"
+                data-aos="fade-down" data-aos-duration="1000">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-gradient-to-tr from-cyan-500 to-teal-600 text-white p-3 rounded-full shadow-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 10H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h2 class="text-lg font-semibold text-gray-900">Email & Storage Solutions</h2>
+                </div>
+
+                <p class="text-sm font-normal text-gray-800">Reliable communication and data storage are critical to
+                    every business. </p>
+
+                <a href="email.html"
+                    class="group font-normal text-sm font-roboto flex items-center text-sky-600 px-0 py-2 transition duration-300 underline">
+                    View details
+
+                    <svg class="ml-2 w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition duration-300 space-y-3"
+                data-aos="fade-down" data-aos-duration="1500">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-gradient-to-tr from-purple-500 to-indigo-600 text-white p-3 rounded-full shadow-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 15a4 4 0 014-4h1a5 5 0 0110 0h1a3 3 0 010 6H7a4 4 0 01-4-4z" />
+                        </svg>
+                    </div>
+                    <h2 class="text-lg font-semibold text-gray-900">Cloud Services</h2>
+                </div>
+
+                <p class="text-sm font-normal text-gray-800">Reliable cloud solutions for storage, computing, and
+                    seamless scalability.</p>
+
+                <a href="cloud-services.html"
+                    class="group font-normal text-sm font-roboto flex items-center text-sky-600 px-0 py-2 transition duration-300 underline">
+                    View details
+
+                    <svg class="ml-2 w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition duration-300 space-y-3"
+                data-aos="fade-down" data-aos-duration="2000">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-gradient-to-tr from-green-600 to-green-400 text-white p-3 rounded-full shadow-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M10 14h4M4 18h16" />
+                        </svg>
+                    </div>
+                    <h2 class="text-lg font-semibold text-gray-900">IT Infrastructure
+                        Services</h2>
+                </div>
+
+                <p class="text-sm font-normal text-gray-800"> Strong IT setup to keep your business safe and running
+                    well. We handle networks, servers, and ongoing support.</p>
+
+                <a href="it-infrastructure-services.html"
+                    class="group font-normal text-sm font-roboto flex items-center text-sky-600 px-0 py-2 transition duration-300 underline">
+                    View details
+
+                    <svg class="ml-2 w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition duration-300 space-y-3"
+                data-aos="fade-down" data-aos-duration="1000">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-gradient-to-tr from-purple-500 to-pink-600 text-white p-3 rounded-full shadow-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12h18M3 6h18M3 18h18M9 6v12" />
+                        </svg>
+                    </div>
+                    <h2 class="text-lg font-semibold text-gray-900">Custom Web Applications</h2>
+                </div>
+
+                <p class="text-sm font-normal text-gray-800">Web apps bring powerful software capabilities directly to
+                    the browser, eliminating the need for installation or updates.</p>
+
+                <a href="web-app.html"
+                    class="group font-normal text-sm font-roboto flex items-center text-sky-600 px-0 py-2 transition duration-300 underline">
+                    View details
+
+                    <svg class="ml-2 w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition duration-300 space-y-3"
+                data-aos="fade-down" data-aos-duration="1500">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-gradient-to-tr from-pink-500 to-red-500 text-white p-3 rounded-full shadow-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect x="7" y="2" width="10" height="20" rx="2" ry="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 18h2" />
+                        </svg>
+                    </div>
+                    <h2 class="text-lg font-semibold text-gray-900">Mobile App Development</h2>
+                </div>
+
+                <p class="text-sm font-normal text-gray-800">Mobile apps enable businesses to reach users on their most
+                    personal devices — anytime, anywhere. </p>
+
+                <a href="mobile-app.html"
+                    class="group font-normal text-sm font-roboto flex items-center text-sky-600 px-0 py-2 transition duration-300 underline">
+                    View details
+
+                    <svg class="ml-2 w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white aos-init" data-aos="fade-down" data-aos-duration="1000">
+        <div class="py-12 border-b border-gray-700">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4">
+                    <div class="w-full md:w-1/2 lg:w-1/5 px-4 mb-10 md:mb-8 flex flex-col justify-start">
+                        <h3 class="text-lg font-semibold mb-6">DwellIT Systems</h3>
+                        <div class="flex space-x-4 mt-0">
+                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-x"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-10 md:mb-8">
+                        <h3 class="text-lg font-semibold mb-6">IT Services</h3>
+                        <ul class="space-y-3 text-gray-400">
+                            <li><a href="website-development.html" class="hover:text-white">Website Development</a></li>
+                            <li><a href="tms.html" class="hover:text-white">Transport Management System</a></li>
+                            <li><a href="erp-crm.html" class="hover:text-white">Custom ERP &amp; CRM Development</a>
+                            </li>
+                            <li><a href="email.html" class="hover:text-white">Email &amp; Storage Solutions</a></li>
+                            <li><a href="cloud-services.html" class="hover:text-white">Cloud Services</a></li>
+                            <li><a href="it-infrastructure-services.html" class="hover:text-white">IT Infrastructure
+                                    Services</a></li>
+                            <li><a href="web-app.html" class="hover:text-white">Custom Web Applications</a></li>
+                            <li><a href="mobile-app.html" class="hover:text-white">Mobile App Development</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-10 md:mb-8">
+                        <h3 class="text-lg font-semibold mb-6">Contact Info</h3>
+                        <ul class="space-y-6 text-white">
+                            <li class="flex items-start space-x-3">
+                                <i class="fas fa-phone-alt text-sky-600 mt-1"></i>
+                                <a href="tel:+919746046021" class="hover:text-sky-700">+91 9746046021</a>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i class="fas fa-envelope text-sky-600 mt-1"></i>
+                                <a href="mailto:info@dwellit.com"
+                                    class="hover:text-sky-700">hello@dwellitsystems.com</a>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i class="fas fa-clock text-sky-600 mt-1"></i>
+                                <span>Mon – Fri: 10:00 AM – 6:00 PM</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="w-full md:w-1/2 lg:w-[30%] px-4">
+                        <div class="w-full">
+                            <h3 class="text-lg font-semibold mb-6">Technologies</h3>
+                            <div class="w-full flex gap-2 flex-wrap">
+                                <span class="bg-gray-700 text-sm px-6 py-2 rounded-sm font-medium">HTML</span>
+                                <span class="bg-gray-700 text-sm px-6 py-2 rounded-sm font-medium">CSS</span>
+                                <span class="bg-gray-700 text-sm px-6 py-2 rounded-sm font-medium">JavaScript</span>
+                                <span class="bg-gray-700 text-sm px-6 py-2 rounded-sm font-medium">TypeScript</span>
+                                <span class="bg-gray-700 text-sm px-6 py-2 rounded-sm font-medium">React JS</span>
+                                <span class="bg-gray-700 text-sm px-6 py-2 rounded-sm font-medium">Next.js</span>
+                                <span class="bg-gray-700 text-sm px-6 py-2 rounded-sm font-medium">Angular JS</span>
+                                <span class="bg-gray-700 text-sm px-6 py-2 rounded-sm font-medium">Vue.js</span>
+                                <span class="bg-gray-700 text-sm px-6 py-2 rounded-sm font-medium">Node.js</span>
+                                <span class="bg-gray-700 text-sm px-6 py-2 rounded-sm font-medium">Nest.JS</span>
+                                <span class="bg-gray-700 text-sm px-6 py-2 rounded-sm font-medium">Express.js</span>
+                                <span class="bg-gray-700 text-sm px-6 py-2 rounded-sm font-medium">PHP</span>
+                                <span class="bg-gray-700 text-sm px-6 py-2 rounded-sm font-medium">Laravel</span>
+
+                                <span class="bg-gray-700 text-sm px-6 py-2 rounded-sm font-medium">WordPress</span>
+                                <span class="bg-gray-700 text-sm px-6 py-2 rounded-sm font-medium">Shopify</span>
+                                <span class="bg-gray-700 text-sm px-6 py-2 rounded-sm font-medium">Magento</span>
+
+                                <span class="bg-gray-700 text-sm px-6 py-2 rounded-sm font-medium">MySQL</span>
+                                <span class="bg-gray-700 text-sm px-6 py-2 rounded-sm font-medium">MongoDB</span>
+                                <span class="bg-gray-700 text-sm px-6 py-2 rounded-sm font-medium">Firebase</span>
+
+                                <span class="bg-gray-700 text-sm px-6 py-2 rounded-sm font-medium">GitHub</span>
+                                <span class="bg-gray-700 text-sm px-6 py-2 rounded-sm font-medium">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-2 bg-gray-800">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap justify-between items-center">
+                    <div class="w-full text-center lg:text-left text-gray-400 mb-4 lg:mb-0">
+                        <p class="text-center text-sm font-normal">© <span id="current-year">2025</span> All Rights
+                            Reserved.
+                            Developed By
+                            <a href="#" class="text-blue-500 hover:underline">DwellIT Systems</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+
+        const navbar = document.getElementById('mainNavbar');
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.remove('bg-transparent');
+                navbar.classList.add('bg-white', 'shadow-md', 'text-gray-600');
+
+                nav.classList.remove('text-white');
+                nav.classList.add('text-gray-600');
+            } else {
+                navbar.classList.remove('bg-white', 'shadow-md');
+                navbar.classList.add('bg-transparent');
+
+                nav.classList.add('text-white');
+                nav.classList.remove('text-gray-600');
+            }
+        });
+
+        const sideMenu = document.getElementById("sideMenu");
+        document.getElementById("sideToggleBtn").addEventListener("click", () => {
+            sideMenu.classList.remove("translate-x-full");
+        });
+        document.getElementById("closeSideMenu").addEventListener("click", () => {
+            sideMenu.classList.add("translate-x-full");
+        });
+
+        document.querySelectorAll('.toggle-accordion').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('.accordion-icon');
+
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        jQuery("#request-closeModal-Btn").click(function () {
+            jQuery("#request-callback-popup").removeClass('flex').addClass('hidden');
+        });
+
+        setTimeout(() => {
+            jQuery("#request-callback-popup").removeClass('hidden').addClass('flex');
+        }, 20000);
+    </script>
+</body>
+
+</html>
